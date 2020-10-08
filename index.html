@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quran</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	
+	body{
+		margin: auto 0px auto 4px;
+	}
+
+  .btn-info{
+    margin: auto 0px auto 10px;
+  }
+   .btn-danger{
+    margin: auto 0px auto 10px;
+  }
+
+
+	.form-check{
+		margin: auto 10px auto 10px;
+	}
+.result{
+  background-color: lightgrey;
+  font-size: 20px;
+  border-radius: 5px;
+  padding-left: 5px;
+  color: black;
+  margin: auto 5px auto 10px;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="alert alert-primary" role="alert">
+    Quran Memorize Percentage Calculator
+  </div>
+  <select name="" onchange="myFunction(event)" class="custom-select-sm">
+    <option selected value="0" >Select Manzil</option>
+    <option value="670">Manzil 1</option>
+    <option value="696">Manzil 2</option>
+    <option value="665">Manzil 3</option>
+    <option value="903">Manzil 4</option>
+    <option value="856">Manzil 5</option>
+    <option value="842">Manzil 6</option>
+    <option value="1606">Manzil 7</option>
+  </select>
+
+  <select name="" onchange="myFunction(event)" class="custom-select-sm">
+    <option selected value="0">Select Juz</option>
+    <option value="148"> Juz 01</option>
+    <option value="111">Juz 02</option>
+    <option value="126">Juz 03</option>
+    <option value="131">Juz 04</option>
+    <option value="124">Juz 05</option>
+    <option value="110">Juz 06</option>
+    <option value="149">Juz 07</option>
+    <option value="142">Juz 08</option>
+    <option value="159">Juz 09</option>
+    <option value="127">Juz 10</option>
+    <option value="151">Juz 11</option>
+    <option value="170">Juz 12</option>
+    <option value="154">Juz 13</option>
+    <option value="227">Juz 14</option>
+    <option value="185">Juz 15</option>
+    <option value="269">Juz 16</option>
+    <option value="190">Juz 17</option>
+    <option value="202">Juz 18</option>
+    <option value="339">Juz 19</option>
+    <option value="171">Juz 20</option>
+    <option value="178">Juz 21</option>
+    <option value="169">Juz 22</option>
+    <option value="357">Juz 23</option>
+    <option value="175">Juz 24</option>
+    <option value="246">Juz 25</option>
+    <option value="195">Juz 26</option>
+    <option value="399">Juz 27</option>
+    <option value="137">Juz 28</option>
+    <option value="431">Juz 29</option>
+    <option value="564">Juz 30</option>
+
+  </select>
+
+ <select name="" onchange="myFunction(event)" class="custom-select-sm">
+    <option selected value="0">Select Surah</option>
+      <option value="7">1. Al-Fatiha </option>
+      <option value="286">2. Al-Baqarah </option>
+      <option value="200">3. Al-Imran </option>
+      <option value="176">4. An-Nisa </option>
+      <option value="120">5. Al-Maidah</option>
+      <option value="165">6. Al-An'am </option>
+      <option value="206">7. Al-A'raf </option>
+      <option value="75">8. Al-Anfal </option>
+      <option value="129">9. At-Taubah </option>
+      <option value="109">10. Yunus </option>
+      <option value="123">11. Hud </option>
+      <option value="111">12. Yusuf </option>
+      <option value="43">13. Ar-Ra'd </option>
+      <option value="52">14. Ibrahim </option>
+      <option value="99">15. Al-Hijr </option>
+      <option value="128">16. An-Nahl </option>
+      <option value="111">17. Al-Isra </option>
+      <option value="110">18. Al-Kahf </option>
+      <option value="98">19. Maryam </option>
+      <option value="135">20. Ta-Ha </option>
+      <option value="112">21. Al-Anbiya </option>
+      <option value="78">22. Al-Hajj </option>
+      <option value="118">23. Al-Mu'minun </option>
+      <option value="64">24. An-Nur </option>
+      <option value="77">25. Al-Furqan </option>
+      <option value="227">26. Ash-Shuara </option>
+      <option value="93">27. An-Naml </option>
+      <option value="88">28. Al-Qasas </option>
+      <option value="69">29. Al-Ankabut </option>
+      <option value="60">30. Ar-Rum </option>
+      <option value="34">31. Luqman </option>
+      <option value="30">32. As-Sajdah </option>
+      <option value="73">33. Al-Ahzab </option>
+      <option value="54">34. Saba </option>
+      <option value="45">35. Fatir </option>
+      <option value="83">36. Yaseen </option>
+      <option value="182">37. As-Saffat </option>
+      <option value="88">38. Sad </option>
+      <option value="75">39. Az-Zumar </option>
+      <option value="85">40. Al-Mu'min </option>
+      <option value="54">41. Fussilat </option>
+      <option value="53">42. Ash-Shura </option>
+      <option value="89">43. Az-Zukhruf </option>
+      <option value="59">44. Ad-Dukhan </option>
+      <option value="37">45. Al-Jasiyah </option>
+      <option value="35">46. Al-Ahqaf </option>
+      <option value="38">47. Muhammad </option>
+      <option value="29">48. Al-Fath </option>
+      <option value="18">49. Al-Hujurat </option>
+      <option value="45">50. Qaf </option>
+      <option value="60">51. Ad-Dhariyat </option>
+      <option value="49">52. At-Tur </option>
+      <option value="62">53. An-Najm </option>
+      <option value="55">54. Al-Qamar </option>
+      <option value="78">55. Ar-Rahman </option>
+      <option value="96">56. Al-Waqi'ah </option>
+      <option value="29">57. Al-Hadid </option>
+      <option value="22">58. Al-Mujadilah </option>
+      <option value="24">59. Al-Hashr </option>
+      <option value="13">60. Al-Mumtahanah </option>
+      <option value="14">61. As-Saff </option>
+      <option value="11">62. Al-Jumu'ah </option>
+      <option value="11">63. Al-Munafiqoon </option>
+      <option value="18">64. At-Taghabun </option>
+      <option value="12">65. At-Talaq </option>
+      <option value="12">66. At-Tahrim </option>
+      <option value="30">67. Al-Mulk </option>
+      <option value="52">68. Al-Qalam </option>
+      <option value="52">69. Al-Haqqah </option>
+      <option value="44">70. Al-Ma'arij </option>
+      <option value="28">71. Nuh </option>
+      <option value="28">72. Al-Jinn </option>
+      <option value="20">73. Al-Muzzammil </option>
+      <option value="56">74. Al-Muddaththir </option>
+      <option value="40">75. Al-Qiyamah </option>
+      <option value="31">76. Al-Insan </option>
+      <option value="50">77. Al-Mursalaat </option>
+      <option value="40">78. An-Naba </option>
+      <option value="46">79. An-Naziat </option>
+      <option value="42">80. Abasa </option>
+      <option value="29">81. At-Takwir </option>
+      <option value="19">82. Al-Infitaar </option>
+      <option value="36">83. Al-Mutaffifin </option>
+      <option value="25">84. Al-Inshiqaq </option>
+      <option value="22">85. Al-Burooj </option>
+      <option value="17">86. At-Tariq </option>
+      <option value="19">87. Al-A'la </option>
+      <option value="26">88. Al-Ghaashiyah </option>
+      <option value="30">89. Al-Fajr </option>
+      <option value="20">90. Al-Balad </option>
+      <option value="15">91. Ash-Shams </option>
+      <option value="21">92. Al-Lail </option>
+      <option value="11">93. Ad-Duha </option>
+      <option value="8">94. Al-Inshirah </option>
+      <option value="8">95. At-Tin </option>
+      <option value="19">96. Al-Alaq </option>
+      <option value="5">97. Al-Qadr </option>
+      <option value="8">98. Al-Bayyinah </option>
+      <option value="8">99. Al-Zilzal </option>
+      <option value="11">100. Al-'Adiyat </option>
+      <option value="11">101. Al-Qari'ah </option>
+      <option value="8">102. At-Takathur </option>
+      <option value="3">103. Al-'Asr </option>
+      <option value="9">104. Al-Humazah </option>
+      <option value="5">105. Al-Fil </option>
+      <option value="4">106. Quraish </option>
+      <option value="7">107. Al-Ma'un </option>
+      <option value="3">108. Al-Kauthar </option>
+      <option value="6">109. Al-Kafirun </option>
+      <option value="3">110. An-Nasr </option>
+      <option value="5">111. -Lahab </option>
+      <option value="4">112. Al-Ikhlas </option>
+      <option value="5">113. Al-Falaq </option>
+      <option value="6">114. An-Nas </option>
+      </select>
+  </select>
+  <br>
+  <br>
+  <input type="text" class="form-control-sm" id="myText" value="0" disabled>
+  <br>
+  <div class="badge badge-success text-wrap">
+    If you want to add custom ayah number then click on enable
+  </div>
+
+ <div class="form-check">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="disable"  checked>
+    <label class="form-check-label" for="disable">
+      Disable
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="enable" value="option2">
+    <label class="form-check-label" for="enable">
+    Enable
+    </label>
+  </div>
+  <button id="click" type="button" class="btn btn-info">Add</button>
+  
+  <form name="form1">
+    <label >
+      Total Ayah Memorized
+      </label> <input size=5 value="0" disabled id="answer" name=c>
+    <input value="6236" disabled size=5 hidden name=d>
+         <input size=5 name=total2  id="total"disabled hidden>
+          <!-- <input onclick=perc2() type=button value=Calculate> -->
+          <button onclick="perc2()" type="button" class="btn btn-dark">Calculate</button>
+  
+    </form>
+  <button id="click" onClick="window.location.reload();" type="button" class="btn btn-danger">Clear</button>
+  <br>
+  <br>
+
+ <pre><p id="display" class="result"></p> 
+
+ 
+    <script src="script.js"></script> 
+  </body>
+
+</html>
