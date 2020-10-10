@@ -20,6 +20,9 @@ Step 2: Click on Add Button
 Step 3: Click on Calculate
 ```
 
+## Live Demo
+[Demo](https://kasim393.github.io/Quran-memorize-percentage/)
+
 ![Sreenshot](https://raw.githubusercontent.com/kasim393/Quran-memorize-percentage/main/ss.png)
 
 ## How it work?
