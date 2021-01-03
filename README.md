@@ -19,6 +19,8 @@ Step 1: Click on Enable ,it will let you type in textbox where you can write num
 Step 2: Click on Add Button
 Step 3: Click on Calculate
 ```
+## Video Tutorial
+[Youtube](https://www.youtube.com/watch?v=r15UMD93vk0)
 
 ## Live Demo
 [Demo](https://kasim393.github.io/Quran-memorize-percentage/)
